@@ -4,8 +4,12 @@ class App:
     #constantes
     TAILLE = 10
 
-    #création du tableau de base
-    tableau = Tableau.Tableau(TAILLE)
-    tableau.fillTab()
-    #affichage du résultat
-    tableau.show()
+    def main(taille):
+        #création du tableau de base
+        tableau = Tableau.Tableau(taille)
+        tableau.fillTab()
+        #affichage du résultat
+        tableau.show()
+        
+    main(TAILLE)
+        
