@@ -1,8 +1,18 @@
+import random
+
 class Tableau:
 
-    def init_tab(self):
+    matrice = []
+    taille = 0
 
-    a = [[0] * taille] * taille
-    for i in range(taille):
-        for j in range(taille):
-            a[i][j] = int(random.randint(0, 1))
+    def __init__(self, taille):
+        self.matrice = [[0] * taille] * taille
+        self.taille = taille
+    
+    def fillTab(self):
+        for i in range(self.taille):
+            for j in range(self.taille):
+                self.matrice[i][j] = int(random.randint(0, 1))
+    
+    def show(self):
+        print(self.matrice)
